@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV. Nadle Insan Kreasi - Prodak Berkualitas, Kepercayaan Utama</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0F2C59',
+                        gold: '#D4AF37',
+                        'amber-wood': '#C68B59',
+                        'dark-wood': '#4A3525'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-navy text-gold font-bold flex items-center justify-center rounded-lg border-2 border-gold shadow-sm group-hover:scale-105 transition">
+                        NK
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-navy text-base tracking-wide leading-tight">CV. NADLE INSAN KREASI</div>
+                        <p class="text-[10px] text-amber-700 font-medium">Manufaktur Kayu & Bambu</p>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-stone-600">
+                    <a href="#tentang" class="hover:text-navy transition">Tentang Kami</a>
+                    <a href="#perjalanan" class="hover:text-navy transition">Perjalanan</a>
+                    <a href="#visi-misi" class="hover:text-navy transition">Visi & Misi</a>
+                    <a href="#layanan" class="hover:text-navy transition">Layanan</a>
+                    <a href="#produk" class="hover:text-navy transition">Produk</a>
+                    <a href="#klien" class="hover:text-navy transition">Klien</a>
+                    <a href="#kontak" class="hover:text-navy transition">Kontak</a>
+                </nav>
+
+                <!-- Admin Action Badge & Contact Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <div id="admin-status-badge" class="hidden items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-300">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Mode Admin
+                    </div>
+                    <button id="admin-auth-btn" onclick="openLoginModal()" class="text-xs font-semibold px-3 py-2 text-stone-600 hover:text-navy bg-stone-100 hover:bg-stone-200 rounded-lg transition flex items-center gap-1.5">
+                        <i data-lucide="lock" class="w-3.5 h-3.5"></i> <span id="admin-auth-btn-text">Login Admin</span>
+                    </button>
+                    <a href="https://wa.me/6285285424959" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-navy font-bold text-xs px-4 py-2.5 rounded-lg transition shadow-sm flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-stone-600 hover:text-navy focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#tentang" class="block text-sm font-medium text-stone-600 py-1">Tentang Kami</a>
+            <a href="#perjalanan" class="block text-sm font-medium text-stone-600 py-1">Perjalanan</a>
+            <a href="#visi-misi" class="block text-sm font-medium text-stone-600 py-1">Visi & Misi</a>
+            <a href="#layanan" class="block text-sm font-medium text-stone-600 py-1">Layanan</a>
+            <a href="#produk" class="block text-sm font-medium text-stone-600 py-1">Produk</a>
+            <a href="#klien" class="block text-sm font-medium text-stone-600 py-1">Klien</a>
+            <a href="#kontak" class="block text-sm font-medium text-stone-600 py-1">Kontak</a>
+            <div class="pt-3 border-t border-stone-100 space-y-2">
+                <button id="mobile-admin-btn" onclick="openLoginModal()" class="w-full text-xs font-semibold py-2.5 text-stone-700 bg-stone-100 rounded-lg flex items-center justify-center gap-2">
+                    <i data-lucide="lock" class="w-4 h-4"></i> <span id="mobile-admin-btn-text">Login Admin</span>
+                </button>
+                <a href="https://wa.me/6285285424959" target="_blank" class="block text-center bg-amber-500 text-navy font-bold text-xs py-2.5 rounded-lg">
+                    Hubungi Kami Via WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-navy text-white overflow-hidden py-24 lg:py-32">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/20 text-gold border border-gold/30 text-xs font-semibold mb-6">
+                    <i data-lucide="award" class="w-4 h-4"></i> Pengalaman Sejak 2013 | Legal Resmi CV 2025
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Produk Berkualitas, <span class="text-gold">Kepercayaan Utama.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-stone-300 leading-relaxed mb-8">
+                    Perusahaan manufaktur spesialis pengolahan kayu dan bambu. Menghadirkan produk alat makan, perlengkapan dapur unggulan, custom order private label, serta layanan procurement terpercaya.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#produk" class="bg-amber-500 hover:bg-amber-600 text-navy font-bold px-6 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2 text-sm">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i> Lihat Produk Kami
+                    </a>
+                    <a href="#layanan" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition backdrop-blur text-sm">
+                        Layanan Custom Order
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1 rounded-full uppercase tracking-wider">Tentang Kami</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">CV. Nadle Insan Kreasi</h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        Kami adalah perusahaan manufaktur di bidang industri pengolahan kayu dan bambu yang berfokus pada produksi alat makan, perlengkapan dapur, serta kebutuhan khusus (custom order) dan pengadaan (procurement).
+                    </p>
+                    <p class="text-stone-600 leading-relaxed">
+                        Berdiri resmi sebagai badan usaha Commanditaire Vennootschap (CV) pada tahun 2025, kami membawa fondasi jam terbang dan pengalaman panjang sejak 2013 sebagai usaha mikro kecil menengah (UMKM) yang telah melayani berbagai klien nasional skala besar.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-stone-200">
+                        <div>
+                            <div class="text-2xl font-extrabold text-navy">10+ Tahun</div>
+                            <div class="text-xs text-stone-500">Pengalaman Pengolahan Kayu</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold text-navy">100% Alami</div>
+                            <div class="text-xs text-stone-500">Material Ramah Lingkungan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-stone-100 rounded-3xl p-8 border border-stone-200 shadow-inner flex flex-col justify-center gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-navy text-gold rounded-xl">
+                            <i data-lucide="check-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg">Nilai Estetika & Fungsi</h4>
+                            <p class="text-sm text-stone-600">Perpaduan keindahan material kayu/bambu alami dengan presisi fungsi sehari-hari.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-navy text-gold rounded-xl">
+                            <i data-lucide="leaf" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg">Keberlanjutan Material</h4>
+                            <p class="text-sm text-stone-600">Proses manufaktur yang bertanggung jawab dan ramah lingkungan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section id="perjalanan" class="py-20 bg-stone-100 border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-navy mb-4">OUR JOURNEY</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mb-4"></div>
+                <p class="text-stone-600 text-sm sm:text-base">Perjalanan panjang kami dari UMKM hingga menjadi perusahaan berkembang yang siap melayani berbagai skala industri.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Timeline Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl font-black text-amber-500 mb-2">2013</div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Awal Perjalanan UMKM</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Memulai usaha skala UMKM fokus pada produksi kerajinan tangan berbahan dasar kayu dan bambu berkualitas.</p>
+                </div>
+                <!-- Timeline Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl font-black text-amber-500 mb-2">2015 - 2020</div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Pengembangan & Kapasitas</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Peningkatan peralatan modern, variasi produk kitchenware, serta penambahan kapasitas produksi harian.</p>
+                </div>
+                <!-- Timeline Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl font-black text-amber-500 mb-2">2021 - 2025</div>
+                    <h3 class="font-bold text-navy text-lg mb-2">Ekspansi Pasar & Resmikan CV</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Melayani custom order skala besar untuk restoran nasional dan resmi terdaftar sebagai badan hukum Commanditaire Vennootschap (CV).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi & Misi Section -->
+    <section id="visi-misi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Visi -->
+                <div class="bg-navy text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 text-white/5">
+                        <i data-lucide="eye" class="w-64 h-64"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-3">Visi Perusahaan</div>
+                        <h3 class="text-2xl sm:text-3xl font-bold leading-tight mb-6">
+                            Menjadi perusahaan manufaktur kayu dan bambu terkemuka di Indonesia yang inovatif, berkelanjutan, dan terpercaya.
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-300 border-t border-white/10 pt-4">Komitmen penyediaan produk ramah lingkungan berstandar tinggi.</p>
+                </div>
+
+                <!-- Misi -->
+                <div class="bg-stone-50 border border-stone-200 rounded-3xl p-8 sm:p-10">
+                    <div class="text-xs font-bold text-amber-700 uppercase tracking-widest mb-3">Misi Perusahaan</div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                            <i data-lucide="check-square" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                            <span>Menghasilkan produk kayu & bambu yang berkualitas, fungsional, dan bernilai estetika tinggi.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                            <i data-lucide="check-square" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                            <span>Memberikan layanan custom order yang fleksibel sesuai kebutuhan klien.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                            <i data-lucide="check-square" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                            <span>Menjadi mitra terpercaya dalam pengadaan (procurement) produk berbasis kayu & bambu.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                            <i data-lucide="check-square" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                            <span>Mengedepankan prinsip keberlanjutan dan ramah lingkungan dalam proses produksi.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope Of Business -->
+    <section id="layanan" class="py-20 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-gold mb-4">BUSINESS SCOPE</h2>
+                <p class="text-stone-400 text-sm">Solusi produk kayu dan bambu berkualitas dengan layanan fleksibel & profesional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1. Manufaktur -->
+                <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-6 hover:border-amber-500 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="factory" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">1. Manufaktur Produk</h3>
+                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Produksi skala besar perlengkapan dapur & alat makan seperti sendok, garpu, spatula, cutting board, hingga tempat sumpit.</p>
+                </div>
+                <!-- 2. Custom Order -->
+                <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-6 hover:border-amber-500 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sliders" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">2. Custom Order (By Request)</h3>
+                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Pembuatan produk khusus branding/private label, produk hospitality (Hotel, Restoran, Kafe), dan souvenir perusahaan.</p>
+                </div>
+                <!-- 3. Procurement -->
+                <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-6 hover:border-amber-500 transition">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">3. Procurement (Pengadaan)</h3>
+                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Pengadaan produk berbasis kayu & bambu untuk proyek institusi, jaringan F&B, dan kebutuhan ekspor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section id="produk" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-navy mb-4">OUR PRODUCTS</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mb-4"></div>
+                <p class="text-stone-600 text-sm">Koleksi alat makan dan perlengkapan dapur berbahan kayu & bambu unggulan.</p>
+            </div>
+
+            <!-- Panel Admin Control -->
+            <div class="mb-10 p-6 bg-stone-50 rounded-2xl border border-stone-200 shadow-sm">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-lg font-bold text-navy">Manajemen Katalog Produk</h3>
+                            <span id="admin-badge-inline" class="hidden px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Admin Mode Active</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Tambah produk baru dari galeri perangkat Anda (Memerlukan Akses Admin).</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="handleProductAddClick()" class="bg-navy hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition flex items-center gap-1.5 shadow">
+                            <i data-lucide="plus-circle" class="w-4 h-4 text-amber-400"></i> Tambah Produk Baru
+                        </button>
+                        <button onclick="resetDefaultProducts()" class="bg-stone-200 hover:bg-stone-300 text-stone-700 text-xs font-semibold px-3 py-2.5 rounded-lg transition" title="Kembalikan Katalog ke Standar">
+                            Reset Katalog
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form Upload Produk (Admin Only) -->
+                <form id="product-form" onsubmit="handleAddProductSubmit(event)" class="hidden mt-6 pt-6 border-t border-stone-200 space-y-4">
+                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 flex items-center justify-between">
+                        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i> Anda terautentikasi sebagai Admin.</span>
+                        <button type="button" onclick="logoutAdmin()" class="font-bold underline text-amber-900 hover:text-amber-700">Logout</button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Upload Gambar -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy mb-1">Unggah Gambar (Lokal) *</label>
+                            <input type="file" id="prod-image" accept="image/*" required class="w-full text-xs text-stone-600 file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-500 file:text-navy hover:file:bg-amber-600 cursor-pointer border border-stone-300 rounded-lg bg-white">
+                        </div>
+                        <!-- Nama Produk -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy mb-1">Nama Produk *</label>
+                            <input type="text" id="prod-name" placeholder="Contoh: Bamboo Zaru Special" required class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                        </div>
+                        <!-- Deskripsi -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy mb-1">Deskripsi Singkat</label>
+                            <input type="text" id="prod-desc" placeholder="Contoh: Finishing food grade higienis" class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                        </div>
+                    </div>
+                    <div class="flex justify-end gap-3 pt-2">
+                        <button type="button" onclick="toggleProductForm(false)" class="px-4 py-2 text-xs font-semibold text-stone-600 hover:bg-stone-200 rounded-lg transition">Batal</button>
+                        <button type="submit" class="px-5 py-2 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-navy rounded-lg transition flex items-center gap-1 shadow">
+                            <i data-lucide="save" class="w-3.5 h-3.5"></i> Simpan Produk Baru
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Items Rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients & Testimonials Section -->
+    <section id="klien" class="py-20 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-navy mb-4">OUR CLIENTS & TESTIMONIALS</h2>
+                <p class="text-stone-600 text-sm">Kepercayaan mitra terkemuka adalah bukti dedikasi kualitas kami.</p>
+            </div>
+
+            <!-- Client Logos / Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-8 mb-16">
+                <div class="bg-white px-8 py-4 rounded-xl border border-stone-200 shadow-sm font-black text-stone-700 text-sm tracking-wider">
+                    PT. SRIBOGA MARUGAME INDONESIA
+                </div>
+                <div class="bg-white px-8 py-4 rounded-xl border border-stone-200 shadow-sm font-black text-stone-700 text-sm tracking-wider">
+                    PT. SRIBOGA MATAHARI NUSANTARA
+                </div>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm relative flex flex-col justify-between">
+                    <i data-lucide="quote" class="w-8 h-8 text-amber-500 mb-4 opacity-50"></i>
+                    <p class="text-stone-600 text-xs sm:text-sm italic leading-relaxed mb-6">
+                        "CV. Nadle Insan Kreasi menunjukkan komitmen tinggi dalam menjaga kualitas produk dan ketepatan waktu pengiriman. Produk yang dihasilkan memiliki standar finishing yang baik serta konsisten."
+                    </p>
+                    <div class="font-bold text-navy text-xs border-t border-stone-100 pt-3">
+                        PT. Sriboga Marugame Indonesia
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm relative flex flex-col justify-between">
+                    <i data-lucide="quote" class="w-8 h-8 text-amber-500 mb-4 opacity-50"></i>
+                    <p class="text-stone-600 text-xs sm:text-sm italic leading-relaxed mb-6">
+                        "Mitra yang profesional dan dapat diandalkan. Fleksibilitas dalam menangani custom order serta respons yang cepat menjadi nilai tambah dalam setiap kerja sama yang terjalin."
+                    </p>
+                    <div class="font-bold text-navy text-xs border-t border-stone-100 pt-3">
+                        PT. Sriboga Matahari Nusantara
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legality Section -->
+    <section class="py-16 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy text-white rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-bold">
+                        <i data-lucide="file-check" class="w-4 h-4"></i> Legalitas Terdaftar
+                    </div>
+                    <h3 class="text-2xl font-bold">Nomor Induk Berusaha (NIB)</h3>
+                    <p class="text-stone-300 text-xs sm:text-sm">
+                        CV. Nadle Insan Kreasi beroperasi secara legal sesuai hukum Indonesia dengan <span class="text-gold font-mono font-bold">NIB: 0211250048369</span> (Sistem OSS).
+                    </p>
+                </div>
+                <div class="bg-white/10 px-6 py-4 rounded-2xl border border-white/20 text-center font-mono text-xl font-extrabold text-gold tracking-widest shrink-0">
+                    NIB 0211250048369
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Get In Touch -->
+    <footer id="kontak" class="bg-stone-900 text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-stone-800">
+                <!-- Branding -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-amber-500 text-navy font-black flex items-center justify-center rounded-lg">
+                            NK
+                        </div>
+                        <span class="font-extrabold text-lg">CV. NADLE INSAN KREASI</span>
+                    </div>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        "Prodak berkualitas, kepercayaan utama."
+                    </p>
+                    <p class="text-xs text-stone-400">
+                        Manufaktur & Pengadaan Produk Olahan Kayu dan Bambu.
+                    </p>
+                </div>
+
+                <!-- Contact Detail -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-gold text-sm uppercase">Kontak Kami</h4>
+                    <div class="flex items-start gap-3 text-xs text-stone-300">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                        <span>Jl. Kincir Air Mushola Al Ikhlas RT.006/01. Bojong Gede. Bojong Baru. Kab. Bogor, Jawa Barat 16926</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-stone-300">
+                        <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                        <span>0858-xxx / 0896-xxx</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs text-stone-300">
+                        <i data-lucide="mail" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                        <span>nadleinsankreasicv@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- Admin Action Footer -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-gold text-sm uppercase">Akses Admin</h4>
+                    <p class="text-xs text-stone-400">Panel pengelolaan produk dan pengaturan password admin.</p>
+                    <div class="flex gap-2">
+                        <button onclick="openLoginModal()" class="text-xs bg-stone-800 hover:bg-stone-700 text-stone-200 px-4 py-2 rounded-lg border border-stone-700 transition flex items-center gap-2">
+                            <i data-lucide="key-round" class="w-3.5 h-3.5 text-amber-400"></i> Kelola Password Admin
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>&copy; 2025 CV. Nadle Insan Kreasi. All rights reserved.</div>
+                <div class="text-[10px]">Website Landing Page & Catalog System</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="login-modal" class="fixed inset-0 bg-navy/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-stone-200">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-600">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-navy text-gold rounded-full flex items-center justify-center mx-auto mb-3 shadow">
+                    <i data-lucide="shield-lock" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-navy">Autentikasi Admin</h3>
+                <p class="text-xs text-stone-500 mt-1">Masukkan kata sandi admin untuk menambah atau mengedit produk.</p>
+                <p class="text-[10px] text-amber-700 mt-1 bg-amber-50 px-2 py-0.5 rounded inline-block">Password bawaan: <strong>admin123</strong></p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="admin-login-form" onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-navy mb-1">Password Admin</label>
+                    <input type="password" id="admin-password-input" placeholder="••••••••" required class="w-full text-sm px-4 py-2.5 border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
+                </div>
+                <div id="login-error-msg" class="hidden text-xs text-red-600 font-semibold bg-red-50 p-2.5 rounded-lg text-center">
+                    Password salah! Silakan coba lagi.
+                </div>
+                <button type="submit" class="w-full bg-navy hover:bg-slate-800 text-white font-bold text-sm py-2.5 rounded-xl transition shadow">
+                    Masuk Mode Admin
+                </button>
+            </form>
+
+            <!-- Section Change Password (Only Shown when logged in) -->
+            <div id="change-pass-section" class="hidden pt-6 border-t border-stone-200 mt-6 space-y-3">
+                <h4 class="text-xs font-bold text-navy uppercase">Ubah Password Admin</h4>
+                <div class="space-y-2">
+                    <input type="password" id="new-password-input" placeholder="Password Baru" class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg">
+                    <button type="button" onclick="handleChangePassword()" class="w-full bg-amber-500 hover:bg-amber-600 text-navy font-bold text-xs py-2 rounded-lg transition">
+                        Update Password
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Key Password & Auth State Storage
+        const PASS_KEY = 'nk_admin_pass';
+        const AUTH_KEY = 'nk_admin_authenticated';
+        const DEFAULT_PASS = 'admin123';
+
+        // Initial Default Data Produk
+        const initialProducts = [
+            { id: '1', name: 'Bamboo Zaru', desc: 'Wadah bambu penyaji mi/tempura', image: '' },
+            { id: '2', name: 'Tray Tempura', desc: 'Baki penyajian khas Jepang', image: '' },
+            { id: '3', name: 'Tusuk Sate / Skewers Premium', desc: 'Bambu pilihan presisi tinggi', image: '' },
+            { id: '4', name: 'Cooking Chop Stick', desc: 'Sumpit masak ekstra panjang', image: '' },
+            { id: '5', name: 'Tusuk Sate Yakitori', desc: 'Tipe pipih & bentuk khas', image: '' },
+            { id: '6', name: 'Noodle Mix Stick & Dipper', desc: 'Pengaduk mi kayu & bambu', image: '' },
+            { id: '7', name: 'Set Tempat Tissue', desc: 'Kotak tissue kayu estetis', image: '' },
+            { id: '8', name: 'Tempat Sumpit Kayu', desc: 'Wadah meja restoran', image: '' }
+        ];
+
+        // Get stored password
+        function getAdminPassword() {
+            return localStorage.getItem(PASS_KEY) || DEFAULT_PASS;
+        }
+
+        // Check if Admin Logged In
+        function isAdminLoggedIn() {
+            return sessionStorage.getItem(AUTH_KEY) === 'true';
+        }
+
+        // Update UI based on Auth state
+        function updateAdminUI() {
+            const loggedIn = isAdminLoggedIn();
+            const badge = document.getElementById('admin-status-badge');
+            const inlineBadge = document.getElementById('admin-badge-inline');
+            const authBtnText = document.getElementById('admin-auth-btn-text');
+            const mobileAuthText = document.getElementById('mobile-admin-btn-text');
+            const changePassSection = document.getElementById('change-pass-section');
+
+            if (loggedIn) {
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+                inlineBadge.classList.remove('hidden');
+                authBtnText.innerText = 'Logout Admin';
+                mobileAuthText.innerText = 'Logout Admin';
+                changePassSection.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+                inlineBadge.classList.add('hidden');
+                authBtnText.innerText = 'Login Admin';
+                mobileAuthText.innerText = 'Login Admin';
+                changePassSection.classList.add('hidden');
+                toggleProductForm(false);
+            }
+            renderProducts();
+        }
+
+        // Modal Controls
+        function openLoginModal() {
+            if (isAdminLoggedIn()) {
+                // If logged in, clicking acts as Logout prompt or opens modal with change pass option
+                const modal = document.getElementById('login-modal');
+                modal.classList.remove('hidden');
+            } else {
+                document.getElementById('login-error-msg').classList.add('hidden');
+                document.getElementById('admin-password-input').value = '';
+                document.getElementById('login-modal').classList.remove('hidden');
+            }
+        }
+
+        function closeLoginModal() {
+            document.getElementById('login-modal').classList.add('hidden');
+        }
+
+        // Login Handler
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const inputPass = document.getElementById('admin-password-input').value;
+            const actualPass = getAdminPassword();
+
+            if (inputPass === actualPass) {
+                sessionStorage.setItem(AUTH_KEY, 'true');
+                document.getElementById('login-error-msg').classList.add('hidden');
+                closeLoginModal();
+                updateAdminUI();
+                toggleProductForm(true); // Open form after successful login
+            } else {
+                document.getElementById('login-error-msg').classList.remove('hidden');
+            }
+        }
+
+        function logoutAdmin() {
+            sessionStorage.removeItem(AUTH_KEY);
+            closeLoginModal();
+            updateAdminUI();
+        }
+
+        // Change Password Handler
+        function handleChangePassword() {
+            const newPass = document.getElementById('new-password-input').value.trim();
+            if (newPass.length < 4) {
+                alert('Password minimal 4 karakter!');
+                return;
+            }
+            localStorage.setItem(PASS_KEY, newPass);
+            document.getElementById('new-password-input').value = '';
+            alert('Password Admin berhasil diubah!');
+        }
+
+        // Handle Product Add Trigger Button
+        function handleProductAddClick() {
+            if (!isAdminLoggedIn()) {
+                openLoginModal();
+            } else {
+                toggleProductForm(true);
+            }
+        }
+
+        function toggleProductForm(show) {
+            const form = document.getElementById('product-form');
+            if (show === undefined) {
+                form.classList.toggle('hidden');
+            } else if (show) {
+                form.classList.remove('hidden');
+            } else {
+                form.classList.add('hidden');
+            }
+        }
+
+        // LocalStorage Products Helper
+        function getStoredProducts() {
+            const stored = localStorage.getItem('nk_products');
+            if (stored) {
+                try { return JSON.parse(stored); } catch(e) { return initialProducts; }
+            }
+            return initialProducts;
+        }
+
+        // Render Product Cards
+        function renderProducts() {
+            const products = getStoredProducts();
+            const grid = document.getElementById('product-grid');
+            const loggedIn = isAdminLoggedIn();
+            grid.innerHTML = '';
+
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition relative flex flex-col justify-between';
+                
+                const imageContent = p.image 
+                    ? `<img src="${p.image}" alt="${p.name}" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">`
+                    : `<div class="h-44 bg-stone-200 flex items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                        <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                       </div>`;
+
+                const deleteBtnHtml = loggedIn 
+                    ? `<button onclick="deleteProduct('${p.id}')" title="Hapus Produk (Admin)" class="absolute top-2 right-2 bg-red-600/90 hover:bg-red-600 text-white p-1.5 rounded-full backdrop-blur transition shadow">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                       </button>` 
+                    : '';
+
+                card.innerHTML = `
+                    <div class="relative">
+                        ${imageContent}
+                        ${deleteBtnHtml}
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">${p.name}</h4>
+                        <p class="text-xs text-stone-500 mt-1">${p.desc || 'Produk kayu & bambu berkualitas'}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Card Request Custom Order
+            const customCard = document.createElement('div');
+            customCard.className = 'bg-amber-500 rounded-2xl overflow-hidden border border-amber-400 group hover:shadow-md transition text-navy flex flex-col justify-center items-center p-6 text-center min-h-[220px]';
+            customCard.innerHTML = `
+                <i data-lucide="wrench" class="w-10 h-10 mb-2"></i>
+                <h4 class="font-bold text-base">Custom Order</h4>
+                <p class="text-xs font-medium mt-1 mb-4">Butuh spesifikasi atau desain khusus?</p>
+                <a href="https://wa.me/62..." target="_blank" class="bg-navy text-white text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-slate-800 transition shadow">Hubungi Kami</a>
+            `;
+            grid.appendChild(customCard);
+
+            lucide.createIcons();
+        }
+
+        // Submit New Product
+        function handleAddProductSubmit(e) {
+            e.preventDefault();
+            if (!isAdminLoggedIn()) {
+                openLoginModal();
+                return;
+            }
+
+            const nameInput = document.getElementById('prod-name').value.trim();
+            const descInput = document.getElementById('prod-desc').value.trim();
+            const fileInput = document.getElementById('prod-image');
+
+            if (!nameInput) return;
+
+            const saveProduct = (imageDataUrl) => {
+                const newProduct = {
+                    id: Date.now().toString(),
+                    name: nameInput,
+                    desc: descInput,
+                    image: imageDataUrl || ''
+                };
+                const current = getStoredProducts();
+                current.push(newProduct);
+                localStorage.setItem('nk_products', JSON.stringify(current));
+
+                document.getElementById('product-form').reset();
+                toggleProductForm(false);
+                renderProducts();
+            };
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    saveProduct(evt.target.result);
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                saveProduct('');
+            }
+        }
+
+        // Delete Product
+        function deleteProduct(id) {
+            if (!isAdminLoggedIn()) {
+                openLoginModal();
+                return;
+            }
+            if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                let products = getStoredProducts();
+                products = products.filter(p => p.id !== id);
+                localStorage.setItem('nk_products', JSON.stringify(products));
+                renderProducts();
+            }
+        }
+
+        // Reset to Default Products
+        function resetDefaultProducts() {
+            if (isAdminLoggedIn()) {
+                if (confirm('Kembalikan ke daftar produk bawaan?')) {
+                    localStorage.setItem('nk_products', JSON.stringify(initialProducts));
+                    renderProducts();
+                }
+            } else {
+                openLoginModal();
+            }
+        }
+
+        // Init on load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateAdminUI();
+        });
+    </script>
+</body>
+</html>
