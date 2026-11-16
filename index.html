@@ -122,7 +122,7 @@
                         Kami adalah perusahaan manufaktur di bidang industri pengolahan kayu dan bambu yang berfokus pada produksi alat makan, perlengkapan dapur, serta kebutuhan khusus (custom order) dan pengadaan (procurement).
                     </p>
                     <p class="text-stone-600 leading-relaxed">
-                        Berdiri resmi sebagai badan usaha Commanditaire Vennootschap (CV) pada tahun 2025, kami membawa fondasi jam terbang dan pengalaman panjang sejak 2013 sebagai usaha mikro kecil menengah (UMKM) yang telah melayani berbagai klien nasional skala besar.
+                        Berdiri resmi sebagai badan usaha Commanditaire Vennootschap (CV) pada tahun 2025, kami membawa fondasi jam terbang dan pengalaman panjang sejak 2013 sebagai usaha mikro kecil menengah (UMKM).
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-stone-200">
                         <div>
@@ -203,7 +203,7 @@
                     <div>
                         <div class="text-xs font-bold text-gold uppercase tracking-widest mb-3">Visi Perusahaan</div>
                         <h3 class="text-2xl sm:text-3xl font-bold leading-tight mb-6">
-                            Menjadi perusahaan manufaktur kayu dan bambu terkemuka di Indonesia yang inovatif, berkelanjutan, dan terpercaya.
+                            Menjadi perusahaan manufaktur kayu dan bambu yang inovatif, berkelanjutan dan terpercaya.
                         </h3>
                     </div>
                     <p class="text-xs text-stone-300 border-t border-white/10 pt-4">Komitmen penyediaan produk ramah lingkungan berstandar tinggi.</p>
@@ -250,7 +250,7 @@
                         <i data-lucide="factory" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-3">1. Manufaktur Produk</h3>
-                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Produksi skala besar perlengkapan dapur & alat makan seperti sendok, garpu, spatula, cutting board, hingga tempat sumpit.</p>
+                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Produksi perlengkapan dapur & alat makan seperti sendok, garpu, spatula, cutting board, hingga tempat sumpit.</p>
                 </div>
                 <!-- 2. Custom Order -->
                 <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-6 hover:border-amber-500 transition">
@@ -266,13 +266,13 @@
                         <i data-lucide="truck" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-3">3. Procurement (Pengadaan)</h3>
-                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Pengadaan produk berbasis kayu & bambu untuk proyek institusi, jaringan F&B, dan kebutuhan ekspor.</p>
+                    <p class="text-xs text-stone-400 mb-4 leading-relaxed">Pengadaan produk berbasis kayu & bambu untuk proyek institusi dan jaringan F&B.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Products Section (Static HTML using src) -->
+    <!-- Our Products Section (Static HTML using src - Full Image Display) -->
     <section id="produk" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -281,18 +281,18 @@
                 <p class="text-stone-600 text-sm">Koleksi alat makan dan perlengkapan dapur berbahan kayu & bambu unggulan.</p>
             </div>
 
-            <!-- Product Grid (Silakan isi atau ganti atribut src sesuai path gambar Anda) -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product Grid (Semua gambar produk menggunakan object-contain agar tampil utuh tanpa terpotong) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 
                 <!-- Produk 1 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk1_bamboo_zaru.jpeg" alt="Bamboo Zaru" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk1_bamboo_zaru.jpeg" alt="Bamboo Zaru" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Bamboo Zaru</h4>
                         <p class="text-xs text-stone-500 mt-1">Wadah zaru udon dingin</p>
                     </div>
@@ -300,13 +300,13 @@
 
                 <!-- Produk 2 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk2_tray_tempura.jpeg" alt="Tray Tempura" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk2_tray_tempura.jpeg" alt="Tray Tempura" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Tray Tempura</h4>
                         <p class="text-xs text-stone-500 mt-1">Baki penyajian khas Jepang</p>
                     </div>
@@ -314,13 +314,13 @@
 
                 <!-- Produk 3 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk3_bambu_skewers.jpeg" alt="Tusuk Sate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk3_bambu_skewers.jpeg" alt="Tusuk Sate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Tusuk Sate</h4>
                         <p class="text-xs text-stone-500 mt-1">Bambu pilihan presisi tinggi</p>
                     </div>
@@ -328,13 +328,13 @@
 
                 <!-- Produk 4 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk4_cooking_chop_stick.jpeg" alt="Cooking Chop Stick" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk4_cooking_chop_stick.jpeg" alt="Cooking Chop Stick" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Cooking Chop Stick</h4>
                         <p class="text-xs text-stone-500 mt-1">Sumpit masak ekstra panjang</p>
                     </div>
@@ -342,13 +342,13 @@
 
                 <!-- Produk 5 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk5_bamboo_yakitori.jpeg" alt="Tusuk Sate Yakitori" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk5_bamboo_yakitori.jpeg" alt="Tusuk Sate Yakitori" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Tusuk Sate Yakitori</h4>
                         <p class="text-xs text-stone-500 mt-1">Tipe pipih & bentuk khas</p>
                     </div>
@@ -356,13 +356,13 @@
 
                 <!-- Produk 6 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk6_noodle_mix_stick.jpeg" alt="Noodle Mix Stick & Dipper" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk6_noodle_mix_stick.jpeg" alt="Noodle Mix Stick & Dipper" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Noodle Mix Stick</h4>
                         <p class="text-xs text-stone-500 mt-1">Pengaduk pemasakan Udon panas</p>
                     </div>
@@ -370,13 +370,13 @@
 
                 <!-- Produk 7 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk9_bamboo_deeper.jpeg" alt="Set Tempat Tissue" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk9_bamboo_deeper.jpeg" alt="Bamboo Deeper" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Bamboo Deeper</h4>
                         <p class="text-xs text-stone-500 mt-1">Alat untuk mengambil Udon panas</p>
                     </div>
@@ -384,13 +384,13 @@
 
                 <!-- Produk 8 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk13_wooden_tabletop_organizer_set.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk13_wooden_tabletop_organizer_set.jpeg" alt="Wooden Tabletop Organizer set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Wooden Tabletop Organizer set</h4>
                         <p class="text-xs text-stone-500 mt-1">Tempat tissue & Sumpit + Tray</p>
                     </div>
@@ -398,13 +398,13 @@
 
                 <!-- Produk 9 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk11_alu_bone_chicken.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk11_alu_bone_chicken.jpeg" alt="Alu Bone Chicken" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Alu Bone Chicken</h4>
                         <p class="text-xs text-stone-500 mt-1">Palu penghalus tulang ayam</p>
                     </div>
@@ -412,13 +412,13 @@
 
                 <!-- Produk 10 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk14_underliner_hotplate.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk14_underliner_hotplate.jpeg" alt="Underliner Hotplate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Underliner Hotplate</h4>
                         <p class="text-xs text-stone-500 mt-1">Wadah saji makanan/minuman</p>
                     </div>
@@ -426,13 +426,13 @@
 
                 <!-- Produk 11 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk10_custom_queque_stand.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk10_custom_queque_stand.jpeg" alt="Custom Queque Stand" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Custom Queque Stand</h4>
                         <p class="text-xs text-stone-500 mt-1">Tiang daftar antri</p>
                     </div>
@@ -440,20 +440,20 @@
 
                 <!-- Produk 12 -->
                 <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
-                    <div class="relative h-44 bg-stone-200 overflow-hidden">
-                        <img src="Produk12_talenan_kayu.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                    <div class="relative h-60 w-full bg-stone-100 p-4 flex items-center justify-center overflow-hidden">
+                        <img src="Produk12_talenan_kayu.jpeg" alt="Custom Talenan Kayu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400">
                             <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center border-t border-stone-100 bg-white">
                         <h4 class="font-bold text-navy text-sm sm:text-base">Custom Talenan Kayu</h4>
-                        <p class="text-xs text-stone-500 mt-1">alas untuk memotong, mengiris, atau mencincang bahan makanan</p>
+                        <p class="text-xs text-stone-500 mt-1">Alas untuk memotong, mengiris, atau mencincang bahan makanan</p>
                     </div>
                 </div>
 
                 <!-- Card Request Custom Order -->
-                <div class="bg-amber-500 rounded-2xl overflow-hidden border border-amber-400 group hover:shadow-md transition text-navy flex flex-col justify-center items-center p-6 text-center min-h-[220px]">
+                <div class="bg-amber-500 rounded-2xl overflow-hidden border border-amber-400 group hover:shadow-md transition text-navy flex flex-col justify-center items-center p-6 text-center min-h-[280px]">
                     <i data-lucide="wrench" class="w-10 h-10 mb-2"></i>
                     <h4 class="font-bold text-base">Custom Order</h4>
                     <p class="text-xs font-medium mt-1 mb-4">Butuh spesifikasi atau desain khusus?</p>
