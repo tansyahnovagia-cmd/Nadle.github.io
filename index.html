@@ -54,14 +54,8 @@
                     <a href="#kontak" class="hover:text-navy transition">Kontak</a>
                 </nav>
 
-                <!-- Admin Action Badge & Contact Button -->
+                <!-- Contact Button -->
                 <div class="hidden md:flex items-center gap-3">
-                    <div id="admin-status-badge" class="hidden items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-300">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Mode Admin
-                    </div>
-                    <button id="admin-auth-btn" onclick="openLoginModal()" class="text-xs font-semibold px-3 py-2 text-stone-600 hover:text-navy bg-stone-100 hover:bg-stone-200 rounded-lg transition flex items-center gap-1.5">
-                        <i data-lucide="lock" class="w-3.5 h-3.5"></i> <span id="admin-auth-btn-text">Login Admin</span>
-                    </button>
                     <a href="https://wa.me/6285285424959" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-navy font-bold text-xs px-4 py-2.5 rounded-lg transition shadow-sm flex items-center gap-2">
                         <i data-lucide="phone" class="w-4 h-4"></i> Hubungi Kami
                     </a>
@@ -83,10 +77,7 @@
             <a href="#produk" class="block text-sm font-medium text-stone-600 py-1">Produk</a>
             <a href="#klien" class="block text-sm font-medium text-stone-600 py-1">Klien</a>
             <a href="#kontak" class="block text-sm font-medium text-stone-600 py-1">Kontak</a>
-            <div class="pt-3 border-t border-stone-100 space-y-2">
-                <button id="mobile-admin-btn" onclick="openLoginModal()" class="w-full text-xs font-semibold py-2.5 text-stone-700 bg-stone-100 rounded-lg flex items-center justify-center gap-2">
-                    <i data-lucide="lock" class="w-4 h-4"></i> <span id="mobile-admin-btn-text">Login Admin</span>
-                </button>
+            <div class="pt-3 border-t border-stone-100">
                 <a href="https://wa.me/6285285424959" target="_blank" class="block text-center bg-amber-500 text-navy font-bold text-xs py-2.5 rounded-lg">
                     Hubungi Kami Via WhatsApp
                 </a>
@@ -281,7 +272,7 @@
         </div>
     </section>
 
-    <!-- Our Products Section -->
+    <!-- Our Products Section (Static HTML using src) -->
     <section id="produk" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -290,62 +281,129 @@
                 <p class="text-stone-600 text-sm">Koleksi alat makan dan perlengkapan dapur berbahan kayu & bambu unggulan.</p>
             </div>
 
-            <!-- Panel Admin Control -->
-            <div class="mb-10 p-6 bg-stone-50 rounded-2xl border border-stone-200 shadow-sm">
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h3 class="text-lg font-bold text-navy">Manajemen Katalog Produk</h3>
-                            <span id="admin-badge-inline" class="hidden px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Admin Mode Active</span>
+            <!-- Product Grid (Silakan isi atau ganti atribut src sesuai path gambar Anda) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- Produk 1 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk1.png" alt="Bamboo Zaru" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
-                        <p class="text-xs text-stone-500">Tambah produk baru dari galeri perangkat Anda (Memerlukan Akses Admin).</p>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="handleProductAddClick()" class="bg-navy hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition flex items-center gap-1.5 shadow">
-                            <i data-lucide="plus-circle" class="w-4 h-4 text-amber-400"></i> Tambah Produk Baru
-                        </button>
-                        <button onclick="resetDefaultProducts()" class="bg-stone-200 hover:bg-stone-300 text-stone-700 text-xs font-semibold px-3 py-2.5 rounded-lg transition" title="Kembalikan Katalog ke Standar">
-                            Reset Katalog
-                        </button>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Bamboo Zaru</h4>
+                        <p class="text-xs text-stone-500 mt-1">Wadah bambu penyaji mi/tempura</p>
                     </div>
                 </div>
 
-                <!-- Form Upload Produk (Admin Only) -->
-                <form id="product-form" onsubmit="handleAddProductSubmit(event)" class="hidden mt-6 pt-6 border-t border-stone-200 space-y-4">
-                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 flex items-center justify-between">
-                        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i> Anda terautentikasi sebagai Admin.</span>
-                        <button type="button" onclick="logoutAdmin()" class="font-bold underline text-amber-900 hover:text-amber-700">Logout</button>
+                <!-- Produk 2 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk2.jpeg" alt="Tray Tempura" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
                     </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Tray Tempura</h4>
+                        <p class="text-xs text-stone-500 mt-1">Baki penyajian khas Jepang</p>
+                    </div>
+                </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <!-- Upload Gambar -->
-                        <div>
-                            <label class="block text-xs font-bold text-navy mb-1">Unggah Gambar (Lokal) *</label>
-                            <input type="file" id="prod-image" accept="image/*" required class="w-full text-xs text-stone-600 file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-500 file:text-navy hover:file:bg-amber-600 cursor-pointer border border-stone-300 rounded-lg bg-white">
-                        </div>
-                        <!-- Nama Produk -->
-                        <div>
-                            <label class="block text-xs font-bold text-navy mb-1">Nama Produk *</label>
-                            <input type="text" id="prod-name" placeholder="Contoh: Bamboo Zaru Special" required class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
-                        </div>
-                        <!-- Deskripsi -->
-                        <div>
-                            <label class="block text-xs font-bold text-navy mb-1">Deskripsi Singkat</label>
-                            <input type="text" id="prod-desc" placeholder="Contoh: Finishing food grade higienis" class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                <!-- Produk 3 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk3.jpeg" alt="Tusuk Sate / Skewers Premium" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
                         </div>
                     </div>
-                    <div class="flex justify-end gap-3 pt-2">
-                        <button type="button" onclick="toggleProductForm(false)" class="px-4 py-2 text-xs font-semibold text-stone-600 hover:bg-stone-200 rounded-lg transition">Batal</button>
-                        <button type="submit" class="px-5 py-2 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-navy rounded-lg transition flex items-center gap-1 shadow">
-                            <i data-lucide="save" class="w-3.5 h-3.5"></i> Simpan Produk Baru
-                        </button>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Tusuk Sate / Skewers Premium</h4>
+                        <p class="text-xs text-stone-500 mt-1">Bambu pilihan presisi tinggi</p>
                     </div>
-                </form>
-            </div>
+                </div>
 
-            <!-- Dynamic Product Grid -->
-            <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Items Rendered via JS -->
+                <!-- Produk 4 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk4.jpeg" alt="Cooking Chop Stick" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Cooking Chop Stick</h4>
+                        <p class="text-xs text-stone-500 mt-1">Sumpit masak ekstra panjang</p>
+                    </div>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk5.png" alt="Tusuk Sate Yakitori" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Tusuk Sate Yakitori</h4>
+                        <p class="text-xs text-stone-500 mt-1">Tipe pipih & bentuk khas</p>
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk6.png" alt="Noodle Mix Stick & Dipper" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Noodle Mix Stick & Dipper</h4>
+                        <p class="text-xs text-stone-500 mt-1">Pengaduk mi kayu & bambu</p>
+                    </div>
+                </div>
+
+                <!-- Produk 7 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk7.png" alt="Set Tempat Tissue" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Set Tempat Tissue</h4>
+                        <p class="text-xs text-stone-500 mt-1">Kotak tissue kayu estetis</p>
+                    </div>
+                </div>
+
+                <!-- Produk 8 -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition flex flex-col justify-between">
+                    <div class="relative h-44 bg-stone-200 overflow-hidden">
+                        <img src="Produk8.png" alt="Tempat Sumpit Kayu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="hidden w-full h-full items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
+                            <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h4 class="font-bold text-navy text-sm sm:text-base">Tempat Sumpit Kayu</h4>
+                        <p class="text-xs text-stone-500 mt-1">Wadah meja restoran</p>
+                    </div>
+                </div>
+
+                <!-- Card Request Custom Order -->
+                <div class="bg-amber-500 rounded-2xl overflow-hidden border border-amber-400 group hover:shadow-md transition text-navy flex flex-col justify-center items-center p-6 text-center min-h-[220px]">
+                    <i data-lucide="wrench" class="w-10 h-10 mb-2"></i>
+                    <h4 class="font-bold text-base">Custom Order</h4>
+                    <p class="text-xs font-medium mt-1 mb-4">Butuh spesifikasi atau desain khusus?</p>
+                    <a href="https://wa.me/6285285424959" target="_blank" class="bg-navy text-white text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-slate-800 transition shadow">Hubungi Kami</a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -416,7 +474,7 @@
     <!-- Footer / Get In Touch -->
     <footer id="kontak" class="bg-stone-900 text-white pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-stone-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pb-12 border-b border-stone-800">
                 <!-- Branding -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
@@ -447,17 +505,6 @@
                         <span>nadleinsankreasicv@gmail.com</span>
                     </div>
                 </div>
-
-                <!-- Admin Action Footer -->
-                <div class="space-y-3">
-                    <h4 class="font-bold text-gold text-sm uppercase">Akses Admin</h4>
-                    <p class="text-xs text-stone-400">Panel pengelolaan produk dan pengaturan password admin.</p>
-                    <div class="flex gap-2">
-                        <button onclick="openLoginModal()" class="text-xs bg-stone-800 hover:bg-stone-700 text-stone-200 px-4 py-2 rounded-lg border border-stone-700 transition flex items-center gap-2">
-                            <i data-lucide="key-round" class="w-3.5 h-3.5 text-amber-400"></i> Kelola Password Admin
-                        </button>
-                    </div>
-                </div>
             </div>
 
             <div class="pt-8 text-center text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -465,49 +512,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- ADMIN LOGIN MODAL -->
-    <div id="login-modal" class="fixed inset-0 bg-navy/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-stone-200">
-            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-600">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 bg-navy text-gold rounded-full flex items-center justify-center mx-auto mb-3 shadow">
-                    <i data-lucide="shield-lock" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-extrabold text-navy">Autentikasi Admin</h3>
-                <p class="text-xs text-stone-500 mt-1">Masukkan kata sandi admin untuk menambah atau mengedit produk.</p>
-                <!--p class="text-[10px] text-amber-700 mt-1 bg-amber-50 px-2 py-0.5 rounded inline-block">Password bawaan: <strong>admin123</strong--!></p>
-            </div>
-
-            <!-- Login Form -->
-            <form id="admin-login-form" onsubmit="handleAdminLogin(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-navy mb-1">Password Admin</label>
-                    <input type="password" id="admin-password-input" placeholder="••••••••" required class="w-full text-sm px-4 py-2.5 border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500">
-                </div>
-                <div id="login-error-msg" class="hidden text-xs text-red-600 font-semibold bg-red-50 p-2.5 rounded-lg text-center">
-                    Password salah! Silakan coba lagi.
-                </div>
-                <button type="submit" class="w-full bg-navy hover:bg-slate-800 text-white font-bold text-sm py-2.5 rounded-xl transition shadow">
-                    Masuk Mode Admin
-                </button>
-            </form>
-
-            <!-- Section Change Password (Only Shown when logged in) -->
-            <div id="change-pass-section" class="hidden pt-6 border-t border-stone-200 mt-6 space-y-3">
-                <h4 class="text-xs font-bold text-navy uppercase">Ubah Password Admin</h4>
-                <div class="space-y-2">
-                    <input type="password" id="new-password-input" placeholder="Password Baru" class="w-full text-xs px-3 py-2 border border-stone-300 rounded-lg">
-                    <button type="button" onclick="handleChangePassword()" class="w-full bg-amber-500 hover:bg-amber-600 text-navy font-bold text-xs py-2 rounded-lg transition">
-                        Update Password
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- JavaScript Logic -->
     <script>
@@ -519,264 +523,6 @@
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // Key Password & Auth State Storage
-        const PASS_KEY = 'nk_admin_pass';
-        const AUTH_KEY = 'nk_admin_authenticated';
-        const DEFAULT_PASS = 'admin123';
-
-        // Initial Default Data Produk
-        const initialProducts = [
-            { id: '1', name: 'Bamboo Zaru', desc: 'Wadah bambu penyaji mi/tempura', image: '' },
-            { id: '2', name: 'Tray Tempura', desc: 'Baki penyajian khas Jepang', image: '/2.jpeg' },
-            { id: '3', name: 'Tusuk Sate / Skewers Premium', desc: 'Bambu pilihan presisi tinggi', image: '/3.jpeg' },
-            { id: '4', name: 'Cooking Chop Stick', desc: 'Sumpit masak ekstra panjang', image: '4.jpeg' },
-            { id: '5', name: 'Tusuk Sate Yakitori', desc: 'Tipe pipih & bentuk khas', image: '' },
-            { id: '6', name: 'Noodle Mix Stick & Dipper', desc: 'Pengaduk mi kayu & bambu', image: '' },
-            { id: '7', name: 'Set Tempat Tissue', desc: 'Kotak tissue kayu estetis', image: '' },
-            { id: '8', name: 'Tempat Sumpit Kayu', desc: 'Wadah meja restoran', image: '' }
-        ];
-
-        // Get stored password
-        function getAdminPassword() {
-            return localStorage.getItem(PASS_KEY) || DEFAULT_PASS;
-        }
-
-        // Check if Admin Logged In
-        function isAdminLoggedIn() {
-            return sessionStorage.getItem(AUTH_KEY) === 'true';
-        }
-
-        // Update UI based on Auth state
-        function updateAdminUI() {
-            const loggedIn = isAdminLoggedIn();
-            const badge = document.getElementById('admin-status-badge');
-            const inlineBadge = document.getElementById('admin-badge-inline');
-            const authBtnText = document.getElementById('admin-auth-btn-text');
-            const mobileAuthText = document.getElementById('mobile-admin-btn-text');
-            const changePassSection = document.getElementById('change-pass-section');
-
-            if (loggedIn) {
-                badge.classList.remove('hidden');
-                badge.classList.add('flex');
-                inlineBadge.classList.remove('hidden');
-                authBtnText.innerText = 'Logout Admin';
-                mobileAuthText.innerText = 'Logout Admin';
-                changePassSection.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-                badge.classList.remove('flex');
-                inlineBadge.classList.add('hidden');
-                authBtnText.innerText = 'Login Admin';
-                mobileAuthText.innerText = 'Login Admin';
-                changePassSection.classList.add('hidden');
-                toggleProductForm(false);
-            }
-            renderProducts();
-        }
-
-        // Modal Controls
-        function openLoginModal() {
-            if (isAdminLoggedIn()) {
-                // If logged in, clicking acts as Logout prompt or opens modal with change pass option
-                const modal = document.getElementById('login-modal');
-                modal.classList.remove('hidden');
-            } else {
-                document.getElementById('login-error-msg').classList.add('hidden');
-                document.getElementById('admin-password-input').value = '';
-                document.getElementById('login-modal').classList.remove('hidden');
-            }
-        }
-
-        function closeLoginModal() {
-            document.getElementById('login-modal').classList.add('hidden');
-        }
-
-        // Login Handler
-        function handleAdminLogin(e) {
-            e.preventDefault();
-            const inputPass = document.getElementById('admin-password-input').value;
-            const actualPass = getAdminPassword();
-
-            if (inputPass === actualPass) {
-                sessionStorage.setItem(AUTH_KEY, 'true');
-                document.getElementById('login-error-msg').classList.add('hidden');
-                closeLoginModal();
-                updateAdminUI();
-                toggleProductForm(true); // Open form after successful login
-            } else {
-                document.getElementById('login-error-msg').classList.remove('hidden');
-            }
-        }
-
-        function logoutAdmin() {
-            sessionStorage.removeItem(AUTH_KEY);
-            closeLoginModal();
-            updateAdminUI();
-        }
-
-        // Change Password Handler
-        function handleChangePassword() {
-            const newPass = document.getElementById('new-password-input').value.trim();
-            if (newPass.length < 4) {
-                alert('Password minimal 4 karakter!');
-                return;
-            }
-            localStorage.setItem(PASS_KEY, newPass);
-            document.getElementById('new-password-input').value = '';
-            alert('Password Admin berhasil diubah!');
-        }
-
-        // Handle Product Add Trigger Button
-        function handleProductAddClick() {
-            if (!isAdminLoggedIn()) {
-                openLoginModal();
-            } else {
-                toggleProductForm(true);
-            }
-        }
-
-        function toggleProductForm(show) {
-            const form = document.getElementById('product-form');
-            if (show === undefined) {
-                form.classList.toggle('hidden');
-            } else if (show) {
-                form.classList.remove('hidden');
-            } else {
-                form.classList.add('hidden');
-            }
-        }
-
-        // LocalStorage Products Helper
-        function getStoredProducts() {
-            const stored = localStorage.getItem('nk_products');
-            if (stored) {
-                try { return JSON.parse(stored); } catch(e) { return initialProducts; }
-            }
-            return initialProducts;
-        }
-
-        // Render Product Cards
-        function renderProducts() {
-            const products = getStoredProducts();
-            const grid = document.getElementById('product-grid');
-            const loggedIn = isAdminLoggedIn();
-            grid.innerHTML = '';
-
-            products.forEach(p => {
-                const card = document.createElement('div');
-                card.className = 'bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 group hover:shadow-md transition relative flex flex-col justify-between';
-                
-                const imageContent = p.image 
-                    ? `<img src="${p.image}" alt="${p.name}" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">`
-                    : `<div class="h-44 bg-stone-200 flex items-center justify-center text-stone-400 group-hover:bg-amber-100/50 transition">
-                        <i data-lucide="box" class="w-10 h-10 text-amber-600"></i>
-                       </div>`;
-
-                const deleteBtnHtml = loggedIn 
-                    ? `<button onclick="deleteProduct('${p.id}')" title="Hapus Produk (Admin)" class="absolute top-2 right-2 bg-red-600/90 hover:bg-red-600 text-white p-1.5 rounded-full backdrop-blur transition shadow">
-                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
-                       </button>` 
-                    : '';
-
-                card.innerHTML = `
-                    <div class="relative">
-                        ${imageContent}
-                        ${deleteBtnHtml}
-                    </div>
-                    <div class="p-4 text-center">
-                        <h4 class="font-bold text-navy text-sm sm:text-base">${p.name}</h4>
-                        <p class="text-xs text-stone-500 mt-1">${p.desc || 'Produk kayu & bambu berkualitas'}</p>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-
-            // Card Request Custom Order
-            const customCard = document.createElement('div');
-            customCard.className = 'bg-amber-500 rounded-2xl overflow-hidden border border-amber-400 group hover:shadow-md transition text-navy flex flex-col justify-center items-center p-6 text-center min-h-[220px]';
-            customCard.innerHTML = `
-                <i data-lucide="wrench" class="w-10 h-10 mb-2"></i>
-                <h4 class="font-bold text-base">Custom Order</h4>
-                <p class="text-xs font-medium mt-1 mb-4">Butuh spesifikasi atau desain khusus?</p>
-                <a href="https://wa.me/6285285424959" target="_blank" class="bg-navy text-white text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-slate-800 transition shadow">Hubungi Kami</a>
-            `;
-            grid.appendChild(customCard);
-
-            lucide.createIcons();
-        }
-
-        // Submit New Product
-        function handleAddProductSubmit(e) {
-            e.preventDefault();
-            if (!isAdminLoggedIn()) {
-                openLoginModal();
-                return;
-            }
-
-            const nameInput = document.getElementById('prod-name').value.trim();
-            const descInput = document.getElementById('prod-desc').value.trim();
-            const fileInput = document.getElementById('prod-image');
-
-            if (!nameInput) return;
-
-            const saveProduct = (imageDataUrl) => {
-                const newProduct = {
-                    id: Date.now().toString(),
-                    name: nameInput,
-                    desc: descInput,
-                    image: imageDataUrl || ''
-                };
-                const current = getStoredProducts();
-                current.push(newProduct);
-                localStorage.setItem('nk_products', JSON.stringify(current));
-
-                document.getElementById('product-form').reset();
-                toggleProductForm(false);
-                renderProducts();
-            };
-
-            if (fileInput.files && fileInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    saveProduct(evt.target.result);
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            } else {
-                saveProduct('');
-            }
-        }
-
-        // Delete Product
-        function deleteProduct(id) {
-            if (!isAdminLoggedIn()) {
-                openLoginModal();
-                return;
-            }
-            if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
-                let products = getStoredProducts();
-                products = products.filter(p => p.id !== id);
-                localStorage.setItem('nk_products', JSON.stringify(products));
-                renderProducts();
-            }
-        }
-
-        // Reset to Default Products
-        function resetDefaultProducts() {
-            if (isAdminLoggedIn()) {
-                if (confirm('Kembalikan ke daftar produk bawaan?')) {
-                    localStorage.setItem('nk_products', JSON.stringify(initialProducts));
-                    renderProducts();
-                }
-            } else {
-                openLoginModal();
-            }
-        }
-
-        // Init on load
-        window.addEventListener('DOMContentLoaded', () => {
-            updateAdminUI();
         });
     </script>
 </body>
