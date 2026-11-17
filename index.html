@@ -7,7 +7,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { 
+        tailwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -179,7 +179,7 @@
                 <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative hover:-translate-y-1 transition duration-300">
                     <div class="text-3xl font-black text-amber-500 mb-2">2015 - 2020</div>
                     <h3 class="font-bold text-navy text-lg mb-2">Pengembangan & Kapasitas</h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">Peningkatan peralatan modern, variasi produk kitchenware dan penambahan kapasitas produksi harian.</p>
+                    <p class="text-xs text-stone-600 leading-relaxed">Peningkatan peralatan modern, variasi produk kitchenware serta penambahan kapasitas produksi harian.</p>
                 </div>
                 <!-- Timeline Card 3 -->
                 <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm relative hover:-translate-y-1 transition duration-300">
@@ -571,15 +571,23 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // Init Lucide Icons
-        lucide.createIcons();
+        if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
+
+// Init Lucide Icons
+lucide.createIcons();
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
     </script>
 </body>
 </html>
